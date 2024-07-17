@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        center {
+            margin-top: 50px;
+        }
+
+        h2 {
+            color: rgb(136, 135, 135);
+        }
+
+        form {
+            width: 300px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            background: linear-gradient(white, rgb(136, 119, 135))!important;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+
+        .btnstyle {
+            background-color: #afb2b5;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btnstyle:hover {
+            background-color: #a6a8ab;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <form method="POST">
+            <h2>Logout</h2>
+            <label>Faculty Id:</label>
+            <input placeholder="Enter Faculty Id" type="text" name="fid" required/>
+            <label>Password:</label>
+            <input placeholder="Enter password" type="text" name="password" required/>
+            <button id="logout-button" disabled>Logout</button>    
+        </form>
+    </center>
+</body>
+</html>

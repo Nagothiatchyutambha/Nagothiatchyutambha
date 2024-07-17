@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background-image: url('https://wallpapercave.com/wp/wp2842327.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .login-container {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 300px;
+    }
+    
+    .login-container h2 {
+      text-align: center;
+      color: #333; /* Highlighted */
+    }
+    
+    .login-container label {
+      color: #333; /* Highlighted */
+    }
+    
+    .login-container input[type="text"],
+    .login-container input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    
+    .login-container input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: #fff;
+      color: #926f26;
+      cursor: pointer;
+    }
+    
+    .login-container .forgot-password {
+      text-align: center;
+      margin-top: 10px;
+    }
+    
+    .login-container .forgot-password a {
+      color: #926f26; /* Highlighted */
+      text-decoration: none;
+    }
+    
+    .create-account {
+      text-align: center;
+      margin-top: 20px;
+    }
+    
+    .create-account a {
+      color: #926f26; /* Highlighted */
+      text-decoration: none;
+    }
+    .flash-message {
+      background-color: #ffd966; /* Highlighted */
+      padding: 5px 10px;
+      border-radius: 4px;
+    }
+    .flash-message-container {
+      text-align: center;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+       <div class="flash-message-container">
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      {% for message in messages %}
+        <div class="flash-message">
+          <b>{{ message }}</b>
+        </div>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+</div>
+<body>
+
+<div class="login-container">
+  <h2>Login</h2>
+  <form action="#">
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username" required>
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" required>
+    <input type="submit" value="Login">
+  </form>
+  <div class="forgot-password">
+    <a href="{{ url_for('cregistration') }}">Forgot password?</a>
+  </div>
+  <div class="create-account">
+    Don't you have an account? <a href="{{ url_for('cregistration') }}">Create one</a>
+  </div>
+</div>
+
+
+</body>
+</html>
